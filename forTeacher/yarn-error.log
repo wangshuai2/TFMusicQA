@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js add babel-preset-env postcss-modules autoprefixer
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  9.3.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "forteacher",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "webpack": "^4.1.1"
+    },
+    "devDependencies": {
+      "babel-preset-es2015": "^6.24.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/wangdashuai/Library/Caches/Yarn/v1/npm-kind-of-5.1.0-729c91e2d857b7a419a1f9aa65685c4c33f5845d/README.md' -> '/Users/wangdashuai/TFMusicQA/forTeacher/node_modules/define-property/node_modules/kind-of/README.md'

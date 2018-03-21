@@ -1,0 +1,205 @@
+
+@import "./animate.css";
+
+*{margin:0;padding:0;}
+
+.control {
+    position: fixed;
+    z-index: 99;
+}
+.control button {
+    padding: 0.05rem 0.08rem;
+    margin-right: 0.15rem;
+    font-size: 0.10rem;
+    color: #fff;
+    background: #2aaa93;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.5s;
+}
+.control button:focus {
+    background: #87f3e0;
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container.style1 {
+    background: url("../images/bg/1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style2 {
+    background: url("../images/bg/2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style3 {
+    background: url("../images/bg/3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style4 {
+    background: url("../images/bg/4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style5 {
+    background: url("../images/bg/5.png") no-repeat;
+    background-size: 100% 100%;
+}
+.content {
+    width: 6.4rem;
+    height: 4.6875rem;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.q-content {
+    padding: 0.3rem 0.15rem;
+    background: rgba(255, 255, 255, .6);
+}
+
+.q-title {
+    
+}
+
+.q-title h4 {
+    font-size: 0.20rem;
+    font-weight: normal;
+    color: #2aaa93;
+}
+
+.q-options {
+    padding: 0.2rem 0 0 0.3rem;
+}
+
+.q-options div {
+    font-size: 0.14rem;
+    margin-top: 0.15rem;
+}
+
+#list {
+    list-style: none;
+}
+h3 {
+    font-size: 0.24rem;
+    margin: 0 0 0.3rem;
+    font-weight: normal;
+}
+img {
+    width: 100%;
+}
+.answer {
+    margin-top: 0.35rem;
+}
+.answer a {
+    display: inline-block;
+    margin-right: 0.3rem;
+    font-size: 0.2rem;
+    padding: 0.08rem 0.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+.answer a:nth-child(1)::before {
+    content: 'A. ';
+}
+.answer a:nth-child(2)::before {
+    content: 'B. ';
+}
+.answer a:nth-child(3)::before {
+    content: 'C. ';
+}
+.answer a:nth-child(4)::before {
+    content: 'D. ';
+}
+.answer a:focus {
+    box-shadow: 0 0 5px 1px #2aaa93;
+}
+.answer .on {
+    color: #2aaa93;
+    box-shadow: 0 0 5px 1px #2aaa93;
+}
+
+.btn, .next {
+    margin-top: 0.25rem;
+    margin-right: 0.3rem;
+    padding: 0.08rem 0.25rem;
+    font-size: 0.2rem;
+    color: #fff;
+    background: #2aaa93;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.3);
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: 1px 1px 5px 1px #2aaa93;
+}
+
+.popup {
+    display: none;
+    width: 7.5rem;
+    height: 4.6875rem;
+    background: rgba(0, 0, 0, .3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.popup-cont {
+    width: 6.5rem;
+    height: 3.6875rem;
+    margin: 0.5rem auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.popup-title {
+    overflow: hidden;
+}
+.popup-title h4 {
+    margin-top: 0.2rem;
+    font-size: 0.18rem;
+    color: #2aaa93;
+    text-align: center;
+}
+
+.popup-body {
+    padding: 0.2rem 0.15rem 0;
+    column-count: 1;
+    column-gap: 0;
+    counter-reset: item-counter;
+    column-count: 3;
+}
+
+.stu-item {
+    margin: 0 0.15rem 0.2rem;
+    font-size: 0.14rem;
+    color: #333;
+    box-sizing: border-box;
+    border-bottom: 1px solid #babdbc;
+}
+
+i.q-icon {
+    display: inline-block;
+    width: 0.16rem;
+    height: 0.16rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+i.q-icon-dui {
+    background-image: url("../images/icon/dui.png");
+}
+
+i.q-icon-cuo {
+    background-image: url("../images/icon/cuo.png");
+}

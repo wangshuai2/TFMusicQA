@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
-    "server": "webpack-dev-server --open",
+    "start": "webpack --mode production",
+    "server": "webpack-dev-server --open --mode production",
     "build-windows": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress",
     "build-mac": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
   },
@@ -18,15 +18,14 @@
     "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
-    "html-webpack-plugin": "^3.0.7",
     "postcss-loader": "^2.1.2",
     "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-dev-server": "^3.1.1"
   },
   "devDependencies": {
-    "extract-text-webpack-plugin": "^3.0.2",
-    "uglifyjs-webpack-plugin": "^1.2.4",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.7.2",
     "webpack-cli": "^2.0.12"
   }
 }

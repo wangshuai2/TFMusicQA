@@ -8,17 +8,21 @@
     z-index: 99;
 }
 .control button {
-    padding: 0.05rem 0.08rem;
+    padding: 0.03rem 0.08rem;
     margin-right: 0.15rem;
     font-size: 0.10rem;
     color: #fff;
     background: #2aaa93;
     border-radius: 8px;
     border: none;
-    transition: all 0.5s;
+    transition: background 0.5s;
 }
 .control button:focus {
     background: #87f3e0;
+    outline: none;
+}
+.control button:disabled {
+    background: #babdbc;
     outline: none;
 }
 
@@ -61,10 +65,6 @@
     background: rgba(255, 255, 255, .6);
 }
 
-.q-title {
-    
-}
-
 .q-title h4 {
     font-size: 0.20rem;
     font-weight: normal;
@@ -78,6 +78,19 @@
 .q-options div {
     font-size: 0.14rem;
     margin-top: 0.15rem;
+}
+
+.q-options div:nth-child(1)::before {
+    content: 'A. ';
+}
+.q-options div:nth-child(2)::before {
+    content: 'B. ';
+}
+.q-options div:nth-child(3)::before {
+    content: 'C. ';
+}
+.q-options div:nth-child(4)::before {
+    content: 'D. ';
 }
 
 #list {
@@ -142,7 +155,6 @@ img {
 }
 
 .popup {
-    display: none;
     width: 7.5rem;
     height: 4.6875rem;
     background: rgba(0, 0, 0, .3);
@@ -151,6 +163,10 @@ img {
     top: 0;
     left: 0;
     z-index: 50;
+}
+
+.popup.popup-hide {
+    display: none;
 }
 
 .popup-cont {
@@ -176,15 +192,22 @@ img {
     column-count: 1;
     column-gap: 0;
     counter-reset: item-counter;
-    column-count: 3;
+    column-count: 4;
 }
 
 .stu-item {
+    height: 100%;
     margin: 0 0.15rem 0.2rem;
+    padding: 0 0.1rem;
     font-size: 0.14rem;
     color: #333;
     box-sizing: border-box;
     border-bottom: 1px solid #babdbc;
+    overflow: auto;
+}
+
+.stu-item i.q-icon {
+    float: right;
 }
 
 i.q-icon {

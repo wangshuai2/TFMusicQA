@@ -1,0 +1,143 @@
+@import "./animate.css";
+
+* {margin: 0; padding: 0;}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container.style1 {
+    background: url("../images/bg/1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style2 {
+    background: url("../images/bg/2.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style3 {
+    background: url("../images/bg/3.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style4 {
+    background: url("../images/bg/4.png") no-repeat;
+    background-size: 100% 100%;
+}
+.container.style5 {
+    background: url("../images/bg/5.png") no-repeat;
+    background-size: 100% 100%;
+}
+.content {
+    width: 6.4rem;
+    height: 4.6875rem;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.q-content {
+    padding: 0.3rem 0.2rem;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 10px;
+}
+
+.q-title h4 {
+    font-size: 0.18rem;
+    font-weight: normal;
+    color: #2aaa93;
+}
+
+.q-options {
+    padding: 0.2rem 0 0 0.3rem;
+}
+
+.q-options div {
+    font-size: 0.14rem;
+    margin-top: 0.15rem;
+}
+
+.q-options div:nth-child(1)::before {
+    content: 'A. ';
+}
+.q-options div:nth-child(2)::before {
+    content: 'B. ';
+}
+.q-options div:nth-child(3)::before {
+    content: 'C. ';
+}
+.q-options div:nth-child(4)::before {
+    content: 'D. ';
+}
+
+.q-footer {
+    margin-top: 0.2rem;
+    text-align: center;
+    overflow:hidden;
+}
+
+.q-footer button {
+    padding: 0.04rem 0.15rem;
+    font-size: 0.12rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    background: #2aaa93;
+    outline:none;
+    transition: background 0.5s;
+}
+.q-footer button:focus {
+    background: #87f3e0;
+}
+
+.popup {
+    width: 2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+
+    position: fixed;
+    top: 1.34375rem;
+    left: 2.75rem;
+}
+
+.popup.popup-hide {
+    display: none;
+}
+
+.popup-cont {
+    width: 2rem;
+    height: 2rem;
+    background-size: 1.2rem 1.2rem;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.popup-cont.popup-dui {
+    background-image: url("../images/icon/dui.png");
+    background-position-y: 0.18rem;
+}
+
+.popup-cont.popup-cuo {
+    background-size: 1.1rem 1.1rem;
+    background-image: url("../images/icon/cuo.png");
+    background-position-y: 0.25rem;
+}
+
+.popup-cont p {
+    display: none;
+    font-size: 0.14rem;
+    text-align: center;
+    position: relative;
+    top: 1.6rem;
+}
+
+.popup-dui p.dui-p {
+    display: block;
+    color: #2aaa93;
+}
+
+.popup-cuo p.cuo-p {
+    display: block;
+    color: #d81e06;
+}

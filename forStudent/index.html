@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -11,14 +12,9 @@
     <title>问答学生端</title>
     <link rel="stylesheet" href="./public/css/question-s.css">
 </head>
+
 <body>
-    <div class="control">
-        <button id="nextSection">下一节</button>
-        <button id="nextQuestion">下一题</button>
-        <button id="showStuScore">学生成绩</button>
-        <button id="playAudio" disabled>播放音频</button>
-    </div>
-    <div class="container style4" id="container">
+    <div class="container style5" id="container">
         <div class="content" id="content">
             <div class="q-content">
                 <div class="q-title">
@@ -30,130 +26,19 @@
                     <div class="items">回答3回答3回答3回答3</div>
                     <div class="items">回答4回答4回答4回答4</div>
                 </div>
+                <div class="q-footer">
+                    <button id="submitAnswer">提交答案</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="popup popup-hide" id="popup">
-        <div class="popup-cont">
-            <div class="popup-title">
-                <h4>学生成绩</h4>
-            </div>
-            <div class="popup-body">
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-dui"></i>
-                </div>
-                <div class="stu-item">
-                    王大帅吖
-                    <i class="q-icon q-icon-cuo"></i>
-                </div>
-            </div>
+        <div class="popup-cont popup-cuo">
+            <p class="dui-p">回答正确</p>
+            <p class="cuo-p">回答错误</p>
         </div>
     </div>
     <script src="./public/js/question-s.js"></script>
 </body>
+
 </html>

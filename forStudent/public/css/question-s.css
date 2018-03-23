@@ -49,12 +49,13 @@
 }
 
 .q-options {
-    padding: 0.2rem 0 0 0.3rem;
+    padding: 0.2rem 0 0 0.1rem;
 }
 
 .q-options div {
     font-size: 0.14rem;
-    margin-top: 0.15rem;
+    padding: 0.075rem 0.15rem;
+    box-sizing: border-box;
 }
 
 .q-options div:nth-child(1)::before {
@@ -68,6 +69,11 @@
 }
 .q-options div:nth-child(4)::before {
     content: 'D. ';
+}
+
+.q-options .on {
+    /* background: #2aaa93; */
+    color: #2aaa93;
 }
 
 .q-footer {
@@ -88,6 +94,9 @@
 }
 .q-footer button:focus {
     background: #87f3e0;
+}
+.q-footer button:disabled {
+    background: #babdbc;
 }
 
 .popup {

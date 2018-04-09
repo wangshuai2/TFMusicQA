@@ -20,7 +20,11 @@ $(document).on('click', '#showStuScore', function () {
 
 let nowAnswer = 0;
 
-const loadQuestion = function (course, no) {
+// window.loadQuestion = function (course, no) {
+window.loadQuestion = function () {
+    $('audio').remove();
+    const course = 'q31';
+    const no = 0;
     const nowQuestion = qList[course][no];
     nowAnswer = nowQuestion.answer;
     let qcont = '';
@@ -37,6 +41,7 @@ const loadQuestion = function (course, no) {
 
     let qaAudio = document.createElement('audio');
     qaAudio.src = nowQuestion.audio;
+    console.log(nowQuestion.audio);
     qaAudio.addEventListener('canplaythrough', function () {
         console.log('success');
         $('#playAudio').removeAttr('disabled');
@@ -56,9 +61,9 @@ const loadQuestion = function (course, no) {
     })
 }
 
-loadQuestion("q31", 0);
+loadQuestion("q29", 1);
 
-const addStuScore = function (name, answer) {
+window.addStuScore = function (name, answer) {
     let stuitem = '';
     stuitem += '<div class="stu-item">' + name;
     stuitem += parseInt(nowAnswer) == parseInt(answer) ? '<i class="q-icon q-icon-dui"></i></div>' : '<i class="q-icon q-icon-cuo"></i></div>';
@@ -67,7 +72,7 @@ const addStuScore = function (name, answer) {
 }
 
 $(document).on('click', '#nextSection', function() {
-    
+    window.android.nextCourse();
 })
 $(document).on('click', '#nextQuestion', function() {
     

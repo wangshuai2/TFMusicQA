@@ -5,7 +5,7 @@ import qList from './question-list-s'
 
 let nowAnswer = 0;
 
-const loadQuestion = function(course, no) {
+window.loadQuestion = function(course, no) {
     const nowQuestion = qList[course][no];
     nowAnswer = nowQuestion.answer;
     let qcont = '';
@@ -24,7 +24,7 @@ const loadQuestion = function(course, no) {
     $('#qContent').html(qcont);
 }
 
-loadQuestion('q25', 0);
+// loadQuestion('q25', 0);
 
 $(document).on('click', '#qOptions .items', function() {
     $(this).addClass('on').siblings('.items').removeClass('on');
@@ -37,7 +37,7 @@ $(document).on('click', '#submitAnswer', function() {
     duiOrCuo(nowAnswer == stuAnswer);
 })
 
-window.duiOrCuo = function (a) {
+const duiOrCuo = function (a) {
     if (a) {
         $('#popup .popup-cont').addClass('popup-dui').removeClass('popup-cuo');
     } else {

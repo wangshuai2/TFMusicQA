@@ -5,7 +5,7 @@ module.exports = {
         title: '请同学们听一段音乐，并且在下列选项中选择正确的一项。',
         audio: audio.audio1,
         options: ['2/4', '3/4', '4/4'],
-        answer: 0
+        answer: 1
     }, {
         title: '请同学们听一段音乐，并且在下列选项中选择正确的一项。',
         audio: audio.audio11,

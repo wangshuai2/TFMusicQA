@@ -21,9 +21,11 @@ $(document).on('click', '#showStuScore', function () {
 let nowAnswer = 0;
 
 // window.loadQuestion = function (course, no) {
-window.loadQuestion = function () {
+window.loadQuestion = function (course) {
+    // $('.control').append('5454554545454545454545454545');
+    $('.control').append(course);
+    $('#nextSection').focus();
     $('audio').remove();
-    const course = 'q31';
     const no = 0;
     const nowQuestion = qList[course][no];
     nowAnswer = nowQuestion.answer;
@@ -61,12 +63,13 @@ window.loadQuestion = function () {
     })
 }
 
-loadQuestion("q29", 1);
+// loadQuestion("q29");
 
-window.addStuScore = function (name, answer) {
+window.addStuScore = function (answer) {
+    const r = answer.split('=');
     let stuitem = '';
-    stuitem += '<div class="stu-item">' + name;
-    stuitem += parseInt(nowAnswer) == parseInt(answer) ? '<i class="q-icon q-icon-dui"></i></div>' : '<i class="q-icon q-icon-cuo"></i></div>';
+    stuitem += '<div class="stu-item">' + r[0];
+    stuitem += parseInt(nowAnswer) == parseInt(r[1]) ? '<i class="q-icon q-icon-dui"></i></div>' : '<i class="q-icon q-icon-cuo"></i></div>';
     
     $('#stuResult').append(stuitem);
 }
@@ -75,5 +78,7 @@ $(document).on('click', '#nextSection', function() {
     window.android.nextCourse();
 })
 $(document).on('click', '#nextQuestion', function() {
-    
+    window.android.nextQuestion();
 })
+
+//

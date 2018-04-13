@@ -4,9 +4,14 @@ import $ from 'jquery'
 import qList from './question-list-s'
 
 let nowAnswer = 0;
+let nowQuestion = '';
+let course = '';
+let no = 0;
 
-window.loadQuestion = function(course, no) {
-    const nowQuestion = qList[course][no];
+window.loadQuestion = function(course) {
+
+    $('#container').append(course);
+    nowQuestion = qList[course][no];
     nowAnswer = nowQuestion.answer;
     let qcont = '';
     qcont += '<div class="q-title">';
@@ -24,7 +29,7 @@ window.loadQuestion = function(course, no) {
     $('#qContent').html(qcont);
 }
 
-// loadQuestion('q25', 0);
+// loadQuestion('q29.mp4');
 
 $(document).on('click', '#qOptions .items', function() {
     $(this).addClass('on').siblings('.items').removeClass('on');
@@ -35,6 +40,7 @@ $(document).on('click', '#submitAnswer', function() {
     console.log($('#qOptions .on').index());
     const stuAnswer = $('#qOptions .on').index();
     duiOrCuo(nowAnswer == stuAnswer);
+    window.android.submitAnd(stuAnswer);
 })
 
 const duiOrCuo = function (a) {
@@ -53,3 +59,10 @@ const duiOrCuo = function (a) {
         }, 1000);
     });
 }
+
+window.nextQuestionJs = function() {
+    no++;
+    loadQuestion(course);
+}
+
+// submitAnd

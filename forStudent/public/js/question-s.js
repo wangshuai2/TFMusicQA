@@ -11,7 +11,7 @@ let no = 0;
 window.loadQuestion = function(course) {
 
     $('#container').append(course);
-    nowQuestion = qList[course][no];
+    nowQuestion = qList[course][0];
     nowAnswer = nowQuestion.answer;
     let qcont = '';
     qcont += '<div class="q-title">';
@@ -29,7 +29,7 @@ window.loadQuestion = function(course) {
     $('#qContent').html(qcont);
 }
 
-// loadQuestion('q29.mp4');
+loadQuestion(416);
 
 $(document).on('click', '#qOptions .items', function() {
     $(this).addClass('on').siblings('.items').removeClass('on');
